@@ -1,28 +1,42 @@
-let inp1 = document.getElementById("input1").value;
-let inp2 = document.getElementById("input2").value;
-// let plus = document.getElementById("addition");
-// let result = document.getElementById("equal");
+let inp1 = Number(document.getElementById("input1").value);
+let inp2 = Number(document.getElementById("input2").value);
+let addition = document.getElementById("addition");
+let subtraction = document.getElementById("subtraction");
 
-// function equal(e) {
-//   let finalResults = Number(inp1) + Number(inp2);  
-//   e.preventDefault();
-//   return finalResults;
-// }
+let oneAdd = addition === false;
 
-let finalResults;
+// Addition
+// document.getElementById("addition").addEventListener("click", function(){
+//     let finalResults = Number(inp1) + Number(inp2);  
+//       console.log(finalResults);
+//   document.getElementById("result").innerHTML = finalResults;
+//     // return finalResults;
+// });
 
-document.getElementById("equal").addEventListener("click", function(event){
-    let finalResults = Number(inp1) + Number(inp2);  
-  event.preventDefault();
-    return finalResults;
+addition.onclick = function(){
+  let finalResults = Number(inp1) + Number(inp2);  
+        console.log(finalResults);
+    document.getElementById("result").innerHTML = finalResults;
+};
+
+subtraction.onclick = function(){
+  let finalResults = Number(inp1) - Number(inp2);  
+        console.log(finalResults);
+    document.getElementById("result").innerHTML = finalResults;
+};
+
+// Clear/Reset
+document.getElementById("clear").addEventListener("click", function(){
+  // // document.getElementById("input1").innerHTML = '';
+  // document.getElementById("input1").value = '';
+  // // document.getElementById("input2").innerHTML = '';
+  // document.getElementById("input2").value = '';
+
+  //   document.getElementById("myForm").reset();
+    // window.location.reload();
+
+  // console.log();
+
+  // return finalResults;
 
 });
-console.log(finalResults);
-// document.getElementById("result").innerHTML = finalResults;
-
-// function clear() {
-//   inp1 = 0;
-//   inp2 = 0;
-
-
-// }
