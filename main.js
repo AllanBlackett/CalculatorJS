@@ -1,28 +1,59 @@
-let inp1 = document.getElementById("input1").value;
-let inp2 = document.getElementById("input2").value;
-// let plus = document.getElementById("addition");
-// let result = document.getElementById("equal");
+// Buttons
+let add = document.getElementById("addition");
+let subtract = document.getElementById("subtraction");
+let multiply = document.getElementById("multiplication");
+let divide = document.getElementById("division");
 
-// function equal(e) {
-//   let finalResults = Number(inp1) + Number(inp2);  
-//   e.preventDefault();
-//   return finalResults;
-// }
+// When user clicks on the button of any of the four operators,
+// display the operator value to the input element. 
 
-let finalResults;
-
-document.getElementById("equal").addEventListener("click", function(event){
-    let finalResults = Number(inp1) + Number(inp2);  
-  event.preventDefault();
-    return finalResults;
-
+// Addition
+add.addEventListener('click', function () {
+  document.getElementById('operator').value = '+';
 });
-console.log(finalResults);
-// document.getElementById("result").innerHTML = finalResults;
+// Subtract
+subtract.addEventListener('click', function () {
+  document.getElementById('operator').value = '-';
+});
+// Multiply
+multiply.addEventListener('click', function () {
+  document.getElementById('operator').value = '*';
+});
+// Divide
+divide.addEventListener('click', function () {
+  document.getElementById('operator').value = '/';
+});
 
-// function clear() {
-//   inp1 = 0;
-//   inp2 = 0;
+//* Numbers
+//! Add numbers button to display in the operator input element when clicked on any numbers
+
+// ................................................................
+
+function calculations() {
+  // Inputs
+  let textType = Node.textContent ? 'textContent' : 'innerText';
+  let num1 = Number(document.getElementById("number1").value);
+  let num2 = Number(document.getElementById("number2").value);
+
+  // retrieves the result ID
+  result = document.getElementById('result');
 
 
-// }
+  switch (document.getElementById('operator').value.replace(/\s/g, '')) {
+    case '+':
+      result[textType] = num1 + num2;
+      break;
+    case '-':
+      result[textType] = num1 - num2;
+      break;
+    case '*':
+      result[textType] = num1 * num2;
+      break;
+    case '/':
+      result[textType] = num1 / num2;
+      break;
+    default:
+      result[textType] = 'Please select a valid Operand.';
+      break;
+  }
+}
