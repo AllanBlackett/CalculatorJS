@@ -14,22 +14,23 @@
   <div class="container">
 
     <div class="placeholder">
-      <form id="myForm">
-      <input type="text" id="input1" value=''>
-      <!-- <div class="display">+</div> -->
-      <input type="text" id="input2" value=''>
+      
+      <input type="text" id="number1" value=''>
+      <input type="text" id="operator"/>
+      <input type="text" id="number2" value=''>
       <div id="result"></div>
-    </form>
+   
     </div>
 
     <div class="buttons">
-      <button id="addition"  ><i class="fas fa-plus"></i></button>
+      <button id="addition"><i class="fas fa-plus"></i></button>
       <button id="subtraction"><i class="fas fa-minus"></i></button> 
       <button id="division"><i class="fas fa-divide"></i></button> 
       <button id="multiplication"><i class="fas fa-times"></i></button> 
-      <!-- <button id="equal"><i class="fas fa-equals"></i></button> -->
+      <input type="button" value="Solve" onclick="calculations()" />
 
-      <button id="clear">C</button>
+      <!--! Add clear buttons that clears the values of input  -->
+      <!-- <button id="clear">C</button> -->
     </div>
 
   </div>
